@@ -1,12 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
 import Catalog from './pages/Catalog';
 import Cart from './pages/Cart';
-import './App.css';
+import './styles/app.css';
 import Header from './components/Header';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Header />
       <Routes>
         <Route path="/" element={<Catalog />} />

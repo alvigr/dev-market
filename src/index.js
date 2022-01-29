@@ -9,11 +9,11 @@ function start(initialState) {
     <React.StrictMode>
       <App initialState={initialState} />
     </React.StrictMode>,
-    document.getElementById('root')
+    document.getElementById('root'),
   );
 }
 
-window.app = { start }
+window.app = { start };
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

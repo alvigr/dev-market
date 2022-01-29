@@ -1,21 +1,13 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Catalog from './pages/Catalog';
 import Cart from './pages/Cart';
+import './App.css';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>DevMarket</h1>
-        <ul>
-          <li>
-            <Link to="/">Catalog</Link>
-          </li>
-          <li>
-            <Link to="cart">Cart</Link>
-          </li>
-        </ul>
-      </header>
+      <Header />
       <Routes>
         <Route path="/" element={<Catalog />} />
         <Route path="cart" element={<Cart />} />

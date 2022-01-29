@@ -47,7 +47,7 @@ export const { addToCart, removeFromCart, clearCart } = cartSlice.actions;
 export const selectProductsInCart = state => {
   return state.cart.items
     .map(item => {
-      const product = findById(state.products.items, item.id);
+      const product = findById(state.catalog.items, item.id);
       if (!product) return null;
       return { product, quantity: item.quantity };
     })

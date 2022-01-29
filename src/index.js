@@ -4,7 +4,7 @@ import { store } from './store';
 import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
-import { loadProductsAsync } from './reducers/productsSlice';
+import { loadProductsAsync } from './reducers/catalogSlice';
 
 function start(initialState) {
   store.dispatch(loadProductsAsync(initialState.dealers));

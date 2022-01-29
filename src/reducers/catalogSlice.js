@@ -7,14 +7,14 @@ const initialState = {
 };
 
 export const loadProductsAsync = createAsyncThunk(
-  'products/fetchProducts',
+  'catalog/fetchProducts',
   async dealers => {
     return await fetchProducts(dealers);
   },
 );
 
-export const productsSlice = createSlice({
-  name: 'products',
+export const catalogSlice = createSlice({
+  name: 'catalog',
   initialState,
   reducers: {},
   extraReducers: builder => {
@@ -33,7 +33,7 @@ export const productsSlice = createSlice({
   },
 });
 
-export const selectProducts = state => state.products.items;
-export const selectProductsStatus = state => state.products.status;
+export const selectProducts = state => state.catalog.items;
+export const selectProductsStatus = state => state.catalog.status;
 
-export default productsSlice.reducer;
+export default catalogSlice.reducer;

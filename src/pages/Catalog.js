@@ -2,15 +2,12 @@ import { useSelector } from 'react-redux';
 import { selectProducts, selectProductsStatus } from '../reducers/catalogSlice';
 import Product from '../components/Product';
 
-function App() {
+function Catalog() {
   const products = useSelector(selectProducts);
   const status = useSelector(selectProductsStatus);
   return (
-    <div>
-      <p>
-        Edit <code>src/App.js</code> and save to reload.
-      </p>
-      <p>{status}</p>
+    <div className="catalog">
+      {status === 'loading' && <p>Loading...</p>}
       {products.map(product => (
         <Product key={`catalog-product-${product.id}`} product={product} />
       ))}
@@ -18,4 +15,4 @@ function App() {
   );
 }
 
-export default App;
+export default Catalog;

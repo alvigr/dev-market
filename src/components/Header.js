@@ -1,30 +1,25 @@
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { selectTotalPrice, selectTotalQuantity } from '../reducers/cartSlice';
+import CartButton from './CartButton';
+import '../styles/header.css';
 
 function Header() {
-  const totalPrice = useSelector(selectTotalPrice);
-  const totalQuantity = useSelector(selectTotalQuantity);
   return (
-    <header className="App-header">
-      <div>
-        <div>
-          <Link to="/">
-            <h1>DevMarket</h1>
-          </Link>
+    <header className="header">
+      <div className="header-body">
+        <div className="main-menu">
+          <div className="site-logo">
+            <Link to="/">
+              <span>DEV</span>
+              MARKET
+            </Link>
+          </div>
+          <ul className="main-menu-items">
+            <li>
+              <Link to="/">Catalog</Link>
+            </li>
+          </ul>
         </div>
-        <div>
-          <Link to="/">
-            <p>Catalog</p>
-          </Link>
-        </div>
-      </div>
-      <div>
-        <p>
-          <Link to="cart">Cart</Link>
-        </p>
-        <p>$ {totalPrice}</p>
-        <p>{totalQuantity}</p>
+        <CartButton />
       </div>
     </header>
   );

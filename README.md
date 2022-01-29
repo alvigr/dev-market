@@ -1,1 +1,3 @@
-# dev-market
+# DevMarket
+
+Marketplace for developers!

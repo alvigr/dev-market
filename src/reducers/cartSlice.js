@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { getCartState } from '../cartStarage';
 
 const initialState = {
-  items: [],
+  items: getCartState()?.items || [],
 };
 
 const findById = (items, id) => {

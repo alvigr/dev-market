@@ -23,12 +23,19 @@ export const catalogSlice = createSlice({
         state.status = 'loading';
       })
       .addCase(loadProductsAsync.fulfilled, (state, action) => {
-        state.status = 'idle';
-        state.items = action.payload.map(item => ({
-          ...item,
-          id: item.name,
-          image: `${BASE_URL}${item.image}`,
-        }));
+        if (Array.isArray(action.payload)) {
+          state.status = 'idle';
+          state.items = action.payload.map(item => ({
+            ...item,
+            id: item.name,
+            image: `${BASE_URL}${item.image}`,
+          }));
+        } else {
+          state.status = 'error';
+        }
+      })
+      .addCase(loadProductsAsync.rejected, state => {
+        state.status = 'error';
       });
   },
 });

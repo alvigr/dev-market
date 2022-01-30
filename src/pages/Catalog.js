@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { selectProducts, selectProductsStatus } from '../reducers/catalogSlice';
 import Product from '../components/Product';
+import '../styles/catalog.css';
 
 function Catalog() {
   const products = useSelector(selectProducts);

@@ -2,3 +2,15 @@ a {
   outline: none;
   text-decoration: none;
 }
+
+.container {
+  background-color: #ffffff;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.container-body {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}

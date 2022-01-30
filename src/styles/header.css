@@ -17,6 +17,8 @@
   align-items: center;
   justify-content: space-between;
   max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .main-menu {

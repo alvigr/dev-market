@@ -8,7 +8,7 @@ import App from './App';
 import './index.css';
 
 function start(initialState) {
-  store.dispatch(loadProductsAsync(initialState.dealers));
+  store.dispatch(loadProductsAsync(initialState?.dealers));
 
   ReactDOM.render(
     <React.StrictMode>

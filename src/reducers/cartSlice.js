@@ -60,12 +60,9 @@ export const selectTotalPrice = state => {
     0,
   );
 };
-export const  selectTotalQuantity = state => {
+export const selectTotalQuantity = state => {
   const products = selectProductsInCart(state);
-  return products.reduce(
-    (value, item) => value + item.quantity,
-    0,
-  );
+  return products.reduce((value, item) => value + item.quantity, 0);
 };
 
 export default cartSlice.reducer;

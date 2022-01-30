@@ -1,0 +1,39 @@
+.button {
+  height: 32px;
+  border-radius: 7px;
+  padding-left: 8px;
+  padding-right: 8px;
+  outline: 0;
+  text-decoration: none;
+  line-height: 32px;
+  border: none;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.button-primary {
+  background-color: #1815ff;
+  color: #ffffff;
+  transition: 200ms;
+}
+
+.button:hover {
+  box-shadow: 0 0 3px #1815ff;
+}
+
+.button-secondary {
+  background: transparent;
+  color: #151528;
+  border: 1px solid #1e1be7;
+  transition: 200ms;
+}
+
+.button-primary:active {
+  box-shadow: none;
+  background-color: #0706c6;
+}
+
+.button-secondary:active {
+  box-shadow: none;
+  background-color: #e9e9f9;
+}

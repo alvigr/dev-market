@@ -3,6 +3,10 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  color: #151528;
+}
+
 .container {
   background-color: #ffffff;
   padding-left: 16px;
@@ -16,6 +20,9 @@ a {
 }
 
 @media (max-width: 767px) {
+  h1 {
+    font-size: 1.5em;
+  }
   .container {
     padding-left: 4px;
     padding-right: 4px;

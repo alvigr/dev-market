@@ -1,14 +1,22 @@
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../reducers/cartSlice';
+import '../styles/product.css';
+import Button from './Button';
 
 function Product({ product }) {
   const dispatch = useDispatch();
   return (
     <div className="product">
       <img alt={`image-${product.name}`} src={product.image} />
-      <p>{product.name}</p>
-      <p>$ {product.price}</p>
-      <button onClick={() => dispatch(addToCart(product))}>Add cart</button>
+      <div className="product-info">
+        <span className="product-name">{product.name}</span>
+        <div className="product-price">
+          <span>$ {product.price}</span>
+          <Button onClick={() => dispatch(addToCart(product))}>
+            Add to cart
+          </Button>
+        </div>
+      </div>
     </div>
   );
 }

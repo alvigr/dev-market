@@ -19,6 +19,7 @@
 .cart-total {
   padding-left: 32px;
   width: 300px;
+  margin-bottom: 32px;
 }
 
 .cart-total-title {
@@ -70,7 +71,7 @@
 
 @media (max-width: 767px) {
   .cart-title h1 {
-    margin-right: 8px;
+    margin-right: 16px;
   }
   .cart {
     padding-left: 8px;

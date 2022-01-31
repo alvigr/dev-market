@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import catalogReducer from './reducers/catalogSlice';
 import cartReducer from './reducers/cartSlice';
-import { setCartState } from './cartStarage';
+import { setCartState } from './cartStorage';
 
 function saveCartState({ getState }) {
   return next => action => {
